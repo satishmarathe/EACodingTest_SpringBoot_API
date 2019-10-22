@@ -12,7 +12,11 @@ Spring Boot
 Mockito
 
 # To run this example:
-Checkout project and then run the maven command:
+First compile run unit tests package install  :
+mvn clean install
+
+To start rest service:
+mvn spring-boot:run
 
 
 This will start embedded tomcat on port : 9090
