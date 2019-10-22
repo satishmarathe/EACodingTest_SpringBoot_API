@@ -39,3 +39,8 @@ The same logic can be used to mock the service and data layer.
 
 
 # Notes on code coverage 
+Jacoco plugin included for measuring code coverage via unit tests.
+To generate report run the command:
+mvn test
+Report is generated at : 
+<project_root>\target\site\jacoco\index.html
