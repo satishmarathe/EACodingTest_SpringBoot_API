@@ -7,7 +7,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.ea.festivalservice.common.RateLimitException;
-import com.ea.festivalservice.model.Festival;
 import com.ea.festivalservice.model.MusicFestival;
 import com.ea.festivalservice.service.FestivalService;
 

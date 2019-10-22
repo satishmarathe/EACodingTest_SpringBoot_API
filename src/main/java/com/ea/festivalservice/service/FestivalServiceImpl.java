@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 import com.ea.festivalservice.common.ConstantsIfc;
 import com.ea.festivalservice.common.RateLimitException;
 import com.ea.festivalservice.model.Band;
-import com.ea.festivalservice.model.Festival;
 import com.ea.festivalservice.model.MusicFestival;
 
 
