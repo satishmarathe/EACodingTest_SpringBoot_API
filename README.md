@@ -44,3 +44,7 @@ To generate report run the command:
 mvn test
 Report is generated at : 
 <project_root>\target\site\jacoco\index.html
+
+# Note about CORS
+In this example we have resolved cors issue ( for client consuming rest service ) by adding @CrossOrigin
+annotation while in jersey implementation provided by swagger we had a Response filter adding to the header.
