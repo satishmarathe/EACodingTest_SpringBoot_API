@@ -1,0 +1,78 @@
+swagger: "2.0"
+info:
+  title: "Energy Australia Coding Test API"
+  
+  version: "v1"
+
+
+  
+basePath: "/"
+
+  
+produces:
+  - application/json
+  - text/json
+  - text/plain
+
+securityDefinitions:
+  API Key:
+    type: basic
+    description: "API Key and secret"
+
+security: 
+  - API Key: []
+  
+paths:
+  /api/v1/festivals:
+    get:
+      tags:
+      - "festivals"
+      operationId: "getFestivals"
+      
+      responses:
+        200:
+          $ref: "#/responses/200GetFestivalsSuccessResponse"
+          
+        429:
+          $ref: "#/responses/429GetFestivalsThrottledResponse"
+          
+responses:
+  200GetFestivalsSuccessResponse:
+    description: Success
+    
+    schema:
+      type: array
+      items:
+        $ref: '#/definitions/MusicFestival'
+        
+      
+                      
+                    
+                    
+  429GetFestivalsThrottledResponse:
+    description: Throttled
+    
+    schema:
+      type: string
+      
+      
+
+definitions:
+  MusicFestival:
+    type: object
+    properties:
+      name:
+        type: string
+        
+      bands:
+        type: array
+        items:
+                  $ref: '#/definitions/Band'
+                  
+  Band:
+    type: object
+    properties:
+      name:
+          type: string
+      recordLabel:
+          type: string
